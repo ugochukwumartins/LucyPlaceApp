@@ -8,7 +8,7 @@ class FasinatorPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: Appbarbuilder(),
       body: Body(),
     );

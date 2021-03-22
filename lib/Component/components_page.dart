@@ -91,37 +91,3 @@ class _NewWidgetState extends State<NewWidget> {
   }
 }
 
-class NewWidgets extends StatelessWidget {
-  const NewWidgets({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: GridView.builder(
-          itemCount: Products.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            mainAxisSpacing: 20,
-            crossAxisSpacing: 20,
-            crossAxisCount: 2,
-            childAspectRatio: 0.75,
-          ),
-          itemBuilder: (context, index) => itemCard(
-            products: Products[index],
-            press: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => detailScreen(
-                  product: Products[index],
-                ),
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
